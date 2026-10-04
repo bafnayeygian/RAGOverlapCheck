@@ -1,0 +1,17 @@
+[build-system]
+requires=["setuptools>=68","wheel"]
+build-backend="setuptools.build_meta"
+
+[project]
+name="ragoverlapcheck"
+version="1.0.0"
+description="Measure lexical overlap and redundancy between RAG chunks to identify duplicate context, excessive chunk overlap, and wasted retrieval budget."
+readme="README.md"
+requires-python=">=3.9"
+license={text="MIT"}
+
+[project.scripts]
+rag-overlap-check="rag_overlap_check.cli:main"
+
+[tool.setuptools.packages.find]
+where=["src"]
